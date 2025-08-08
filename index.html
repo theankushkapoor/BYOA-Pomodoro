@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍅 Pomodoro Timer</h1>
+            <p>Stay focused, stay productive</p>
+        </header>
+
+        <main>
+            <div class="timer-container">
+                <div class="timer-display">
+                    <div class="time" id="time">25:00</div>
+                    <div class="session-info" id="session-info">Work Session</div>
+                </div>
+
+                <div class="timer-controls">
+                    <button class="btn btn-primary" id="start-btn">Start</button>
+                    <button class="btn btn-secondary" id="pause-btn" disabled>Pause</button>
+                    <button class="btn btn-secondary" id="reset-btn">Reset</button>
+                </div>
+
+                <div class="session-controls">
+                    <button class="btn btn-outline active" data-mode="work">Work</button>
+                    <button class="btn btn-outline" data-mode="short-break">Short Break</button>
+                    <button class="btn btn-outline" data-mode="long-break">Long Break</button>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="session-count">
+                        Session <span id="current-session">1</span> of <span id="total-sessions">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings">
+                <h3>Settings</h3>
+                <div class="setting-group">
+                    <label for="work-time">Work Time (minutes):</label>
+                    <input type="number" id="work-time" value="25" min="1" max="60">
+                </div>
+                <div class="setting-group">
+                    <label for="short-break-time">Short Break (minutes):</label>
+                    <input type="number" id="short-break-time" value="5" min="1" max="30">
+                </div>
+                <div class="setting-group">
+                    <label for="long-break-time">Long Break (minutes):</label>
+                    <input type="number" id="long-break-time" value="15" min="1" max="60">
+                </div>
+                <div class="setting-group">
+                    <label for="sessions-before-long-break">Sessions before long break:</label>
+                    <input type="number" id="sessions-before-long-break" value="4" min="1" max="10">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ for productivity</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
